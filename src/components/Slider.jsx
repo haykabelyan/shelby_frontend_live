@@ -52,7 +52,7 @@ export function Slider({ slider }) {
                     return (
                         <div
                             key={obj.id}
-                            style={{ backgroundImage: `url('https://shelby-backend-services.vercel.app/${obj.image}')` }}
+                            style={{ backgroundImage: `url('https://shelby-backend-live.vercel.app/${obj.image}')` }}
                             className={currentSlide === (index + 1) ? 'slide active' : 'slide'}
                         >
                             <Animated animationIn='fadeIn' animationOut='' isVisible={visible}>

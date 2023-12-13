@@ -12,7 +12,7 @@ export function DemandedTours({ demandedTours }) {
                         </div>
 
                         <div className='image'>
-                            <img src={`https://shelby-backend-services.vercel.app/${el.image}`} alt='DemandedTours' />
+                            <img src={`https://shelby-backend-live.vercel.app/${el.image}`} alt='DemandedTours' />
                         </div>
                     </div>
                 ))

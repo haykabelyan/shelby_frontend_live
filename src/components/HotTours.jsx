@@ -8,7 +8,7 @@ export function HotTours({ hotTours, homePageLabel }) {
 
             <div className='container'>
                 {hotTours.map(el => <div key={el.id}>
-                    <img src={`https://shelby-backend-services.vercel.app/${el.image}`} alt='HotTours' />
+                    <img src={`https://shelby-backend-live.vercel.app/${el.image}`} alt='HotTours' />
                     <div className='title'>{el.title}</div>
                     <div className='descr'>{el.descr}</div>
                     <Link to='/booking' className='btn'>{el.btn_text}</Link>

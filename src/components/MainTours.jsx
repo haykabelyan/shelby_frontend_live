@@ -9,7 +9,7 @@ export function MainTours({ mainTours, homePageLabel }) {
                 {
                     mainTours.map(el => (
                         <div className='item' key={el.id}>
-                            <img src={`https://shelby-backend-services.vercel.app/${el.image}`} alt='mainTours' />
+                            <img src={`https://shelby-backend-live.vercel.app/${el.image}`} alt='mainTours' />
 
                             <div className='content'>
                                 <div className='title'>{el.title}</div>
