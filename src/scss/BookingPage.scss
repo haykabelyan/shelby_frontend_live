@@ -1,0 +1,600 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 5rem auto 10.5rem;
+    width: 1150px;
+    padding: 5px;
+    gap: .5rem;
+    background: var(--orange);
+    border-radius: 5px;
+    position: relative;
+
+    .check-city {
+        background: var(--white);
+        padding: 10px;
+        position: relative;
+        border-radius: 5px;
+
+        .searchBar {
+            display: flex;
+            width: 300px;
+
+            i {
+                margin: 0 15px 0 10px;
+                font-size: 1.4rem;
+                color: var(--slate);
+            }
+
+            input {
+                width: 100%;
+                font-size: 1.1rem;
+                font-family: 'Montserrat', sans-serif;
+
+                &::-webkit-search-cancel-button {
+                    cursor: pointer;
+                }
+
+                &::placeholder {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        ul {
+            position: absolute;
+            z-index: 999;
+            top: 40px;
+            left: 0;
+            width: 320px;
+            padding: 5px;
+            background: var(--sky);
+            box-shadow: 0 1rem 1rem var(--grayAlpha);
+            max-height: 160px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &::-webkit-scrollbar {
+                width: .6rem;
+                border-radius: 5px;
+                background-color: var(--sky);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: var(--orange);
+                border-radius: 5px;
+                max-height: 20px;
+            }
+
+            li {
+                list-style-type: none;
+                background-color: var(--white);
+                color: var(--slate);
+                margin: .2rem 0;
+                padding: .3rem;
+                cursor: pointer;
+                font-size: 1.1rem;
+                border-radius: 5px;
+
+                &:hover {
+                    background: var(--sky);
+                    color: white;
+                }
+
+                i {
+                    margin: 0 8px 0 5px;
+                }
+            }
+        }
+
+        .activeUl {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+    .check-date {
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 320px;
+        border-radius: 5px;
+        user-select: none;
+
+        .date-input-container {
+            text-align: center;
+            font-size: 1rem;
+            padding: 1.3px 0;
+
+            div {
+                font-weight: 500;
+                color: var(--slate);
+                border-bottom: 1px solid var(--slate);
+            }
+
+            input[type=date] {
+                font-size: 1rem;
+                color: var(--slate);
+                font-family: 'Ubuntu', sans-serif;
+                user-select: none;
+                text-align: center;
+            }
+        }
+    }
+
+    .check-person {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 330px;
+        align-items: center;
+        border-radius: 5px;
+        color: var(--slate);
+        cursor: pointer;
+        user-select: none;
+        background: var(--white);
+
+        .title {
+            font-weight: 500;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                width: 18px;
+                text-align: center;
+            }
+        }
+
+        .circle {
+            background: var(--slate);
+            display: inline-block;
+            width: 4.5px;
+            height: 4.5px;
+            border-radius: 50%;
+        }
+
+        .controlCheckPerson {
+            position: absolute;
+            z-index: 1000;
+            top: 103%;
+            left: 59.6%;
+            width: 330px;
+            max-height: 155px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            background: var(--sky);
+            box-shadow: 0 1rem 1rem var(--black);
+            padding: 6px 0;
+            cursor: auto;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            .btnNumbers {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 15px;
+                width: 130px;
+                border-radius: 5px;
+                border: 1px solid var(--white);
+
+                .prev,
+                .next {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    font-family: 'Ubuntu', sans-serif;
+                }
+            }
+
+            .Rooms,
+            .Adults,
+            .Children {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: var(--white);
+                user-select: none;
+                padding: 2px 20px;
+            }
+
+            .childage-container {
+                padding: 10px 20px 5px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                font-weight: 500;
+
+                .childeAge {
+                    padding: 2px 4px;
+                    font-size: .8rem;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    color: var(--white);
+                    background: none;
+                    font-family: 'Montserrat', sans-serif;
+                    border: 1.5px solid var(--white);
+
+                    option {
+                        color: var(--sky);
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: .6rem;
+                border-radius: 5px;
+                background-color: var(--sky);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: var(--orange);
+                border-radius: 5px;
+                max-height: 20px;
+            }
+        }
+
+        .activeCheckPerson {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+    button {
+        padding: 13px 20px;
+        cursor: pointer;
+        color: var(--white);
+        border-radius: 5px;
+        background-color: var(--sky);
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+            background-color: var(--darkSky);
+        }
+    }
+}
+
+.tours-container {
+    position: relative;
+    max-width: 1200px;
+    margin: -7rem auto 0 auto;
+    padding-top: 40px;
+
+    .closeTable {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        color: var(--darkSky);
+        font-size: 1.3rem;
+        font-weight: 900;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+    .tours {
+        width: 100%;
+        margin: 0 auto 3rem auto;
+        padding: 0 10px;
+        max-height: 600px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: .6rem;
+            height: .6rem;
+            border-radius: 5px;
+            border: 1px solid var(--darkSky);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            max-height: 20px;
+            border-radius: 5px;
+            background: var(--darkSky);
+        }
+
+        table {
+            thead {
+                tr {
+                    position: sticky;
+                    top: 0;
+                }
+            }
+
+            button {
+                background: var(--darkSky);
+                color: white;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 1rem;
+                letter-spacing: 1px;
+
+                &:hover {
+                    background: var(--sky);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1290px) {
+    .tours-container {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .search {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .tours-container {
+        max-width: 1050px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .search {
+        width: 700px;
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+
+        .check-city {
+            width: 100%;
+
+            .searchBar,
+            ul,
+            li {
+                width: 100%;
+            }
+        }
+
+        .check-date {
+            width: 100%;
+            padding: 0 20px;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .check-person {
+            width: 100%;
+            height: 43px;
+            gap: 1rem;
+            padding: 0 20px;
+            justify-content: space-between;
+
+            .controlCheckPerson {
+                top: 74%;
+                left: 2%;
+                width: 670px;
+            }
+        }
+
+        button {
+            width: 30%;
+        }
+    }
+
+    .tours-container {
+        max-width: 1000px;
+    }
+}
+
+
+@media (max-width: 1070px) {
+    .tours-container {
+        max-width: 950px;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .tours-container {
+        max-width: 860px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .tours-container {
+        max-width: 800px;
+
+        .tours {
+            font-size: .8rem;
+
+            table {
+                button {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 840px) {
+    .tours-container {
+        max-width: 720px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .search {
+        width: 500px;
+
+        .check-date {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .check-person {
+            justify-content: center;
+
+            .controlCheckPerson {
+                left: 3%;
+                max-width: 470px;
+            }
+        }
+    }
+
+    .tours-container {
+        max-width: 700px;
+    }
+}
+
+
+@media (max-width: 730px) {
+    .tours-container {
+        max-width: 640px;
+
+        .tours {
+            font-size: .7rem;
+
+            table {
+                button {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 660px) {
+    .tours-container {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 620px) {
+    .tours-container {
+        max-width: 540px;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .search {
+        width: 90%;
+
+        .check-person {
+            .controlCheckPerson {
+                left: auto;
+                right: 15px;
+                width: 93%;
+            }
+        }
+
+        button {
+            width: 120px;
+        }
+    }
+
+    .tours-container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .search {
+
+        .check-city {
+            .searchBar {
+                input {
+                    font-size: .9rem;
+
+                    &::placeholder {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+
+        .check-date {
+            .date-input-container {
+                font-size: .9rem;
+
+                input[type=date] {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .check-person {
+            gap: .2rem;
+
+            .title {
+                font-size: .9rem;
+            }
+
+            .controlCheckPerson {
+                top: 102%;
+                min-width: 200px;
+                max-height: 145px;
+                z-index: 1;
+
+                .btnNumbers {
+                    width: 100px;
+
+                    .prev,
+                    .next {
+                        font-size: .9rem;
+                    }
+                }
+
+                .Rooms,
+                .Adults,
+                .Children {
+                    padding: 1.5px 10px;
+                    font-size: .9rem;
+                }
+
+                .childage-container {
+                    padding: 8px 5px 5px 5px;
+
+                    .childeAge {
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+
+    .tours-container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .search {
+        .check-date {
+            gap: 0;
+
+            i {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 370px) {
+    .search {
+        .check-date {
+            flex-direction: column;
+        }
+    }
+}

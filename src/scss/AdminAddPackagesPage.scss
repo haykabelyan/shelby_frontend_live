@@ -1,0 +1,248 @@
+.AdminAddPackagesPage {
+
+    .message {
+        position: fixed;
+        text-align: center;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        width: 50%;
+        max-width: 400px;
+
+        .success {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: var(--white);
+            color: var(--green);
+            border: 2px solid var(--slate);
+            border-radius: 5px;
+        }
+
+        .error {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: var(--white);
+            color: var(--red);
+            border: 2px solid var(--slate);
+            border-radius: 5px;
+        }
+    }
+
+    form {
+        width: 65%;
+        margin: 5rem auto;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        background: var(--sky);
+
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .inputBox {
+                width: 100%;
+                padding: 10px;
+
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 1rem;
+                    font-family: 'Montserrat', sans-serif;
+                    border-radius: 5px;
+                }
+
+                div {
+                    color: var(--white);
+                    text-align: left;
+                    font-weight: 500;
+                }
+
+                input {
+                    width: 100%;
+                    margin-top: 5px;
+                    padding: 10px;
+                    font-size: 1rem;
+                    font-family: 'Montserrat', sans-serif;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        input[type=submit] {
+            margin: 20px 0 10px 0;
+            padding: 10px 20px;
+            border: 1px solid var(--white);
+            border-radius: 5px;
+            background: var(--white);
+            cursor: pointer;
+            font-size: 1rem;
+
+            &:hover {
+                background: var(--sky);
+                color: var(--white);
+            }
+        }
+    }
+
+    .midSection {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bolder;
+        color: var(--darkSky);
+        user-select: none;
+        font-size: 3.8rem;
+        font-family: 'Consolas';
+        line-height: 4rem;
+        word-spacing: -15px;
+    }
+
+    .tourFilterForm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 10px;
+        color: var(--white);
+        background: var(--sky);
+        border-radius: 5px;
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type=submit] {
+            margin-top: 10px;
+        }
+    }
+
+    .allTours {
+        max-width: 1200px;
+        max-height: 500px;
+        margin: 2rem auto 5rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: .6rem;
+            height: .6rem;
+            border-radius: 5px;
+            border: 1px solid var(--darkSky);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            max-height: 20px;
+            border-radius: 5px;
+            background: var(--darkSky);
+        }
+
+        table {
+            thead {
+                tr {
+                    position: sticky;
+                    top: 0;
+                }
+            }
+        }
+
+        button {
+            padding: 10px;
+            background-color: var(--red);
+            color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--darkRed);
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .AdminAddPackagesPage {
+        form {
+            width: 80%;
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .AdminAddPackagesPage {
+        form {
+            width: 85%;
+        }
+
+        .allTours {
+            max-width: 1000px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .AdminAddPackagesPage {
+        form {
+            width: 90%;
+        }
+
+        .allTours {
+            max-width: 900px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .AdminAddPackagesPage {
+        form {
+            width: 95%;
+        }
+
+        .allTours {
+            max-width: 800px;
+            font-size: .9rem;
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .AdminAddPackagesPage {
+        form {
+            .inner {
+                flex-direction: column;
+            }
+        }
+
+        .allTours {
+            max-width: 750px;
+            font-size: .8rem;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .AdminAddPackagesPage {
+        .allTours {
+            max-width: 670px;
+            margin: 50px 20px;
+            font-size: .7rem;
+        }
+    }
+}
+
+
+@media (max-width: 660px) {
+    .AdminAddPackagesPage {
+        .midSection {
+            font-size: 3rem;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.AboutPage {
+    .progress-container {
+        background-image: url('../../public/images/rating.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 80vh;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        padding: 64px 100px;
+
+        .box {
+            flex: calc(50% - 1rem);
+            position: relative;
+            margin-top: 25px;
+
+            .title {
+                position: absolute;
+                bottom: 20px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: var(--white);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .AboutPage {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .AboutPage {
+        .progress-container {
+            height: 120vh;
+            padding: 32px 30px;
+            text-align: center;
+
+            .box {
+                flex: 100%;
+                top: 15px;
+
+                .title {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .AboutPage {
+        .progress-container {
+            height: 140vh;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.AdminBookingPage {
+    .selectDate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 10px;
+        color: var(--white);
+        background: var(--sky);
+        border-radius: 5px;
+
+        input[type=date] {
+            margin: 10px 0;
+            padding: 9px 5px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--white);
+        }
+
+        input[type=submit] {
+            margin: 10px 0;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            background: var(--white);
+            border: 1px solid var(--white);
+
+            &:hover {
+                background: var(--sky);
+                color: var(--white);
+            }
+        }
+    }
+
+    .container {
+        margin: 3rem 1rem;
+        overflow-y: auto;
+        max-height: 100rem;
+
+        form {
+            margin: 15px;
+            padding-top: 2px;
+            border-radius: 10px;
+            border: 3px solid var(--red);
+
+            &:hover {
+                box-shadow: .2rem .2rem .3rem var(--sky);
+            }
+
+            table {
+                width: 100%;
+                overflow-x: auto;
+                display: block;
+
+                &::-webkit-scrollbar {
+                    width: .6rem;
+                    border-radius: 5px;
+                    border: 1px solid var(--darkSky);
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: var(--sky);
+                    border-radius: 5px;
+                    max-height: 20px;
+                }
+
+                th,
+                td {
+                    background: var(--white);
+                    color: var(--black);
+                    padding: 0 3px;
+                    text-align: center;
+                    font-size: .9rem;
+                    border: 1px solid var(--sky);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .validation {
+                padding: 2px;
+                margin-top: 2px;
+                text-align: center;
+                color: var(--white);
+                background: var(--red);
+
+                label {
+                    margin: 0 5px;
+                    font-weight: 700;
+
+                    input {
+                        margin-left: 4px;
+                    }
+                }
+
+                .indexElem {
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                }
+            }
+
+            .activeValide {
+                background-color: var(--green);
+            }
+        }
+
+        .active {
+            border-color: var(--green);
+        }
+    }
+}
+
+
+@media (max-width: 860px) {
+    .AdminBookingPage {
+        .selectDate {
+            width: 95%;
+
+            .title {
+                display: none;
+            }
+        }
+
+        .container {
+            margin: 3rem 0;
+        }
+    }
+}
